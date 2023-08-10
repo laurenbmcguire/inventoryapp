@@ -1,0 +1,47 @@
+[
+  {
+    "itemName": "Laptop XYZ",
+    "sku": "12345-ABC",
+    "upc": "00123456789",
+    "properties": [
+      {
+        "propertyName": "Processor",
+        "propertyValue": "Intel i7"
+      },
+      {
+        "propertyName": "RAM",
+        "propertyValue": "16GB"
+      }
+    ]
+  },
+  {
+    "itemName": "Smartphone 789",
+    "sku": "67890-DEF",
+    "upc": "00987654321",
+    "properties": [
+      {
+        "propertyName": "Screen Size",
+        "propertyValue": "6.5 inches"
+      },
+      {
+        "propertyName": "Battery Life",
+        "propertyValue": "24 hours"
+      }
+    ]
+  },
+  {
+    "itemName": "Wireless Headphones",
+    "sku": "11223-GHI",
+    "upc": "00876543210",
+    "properties": [
+      {
+        "propertyName": "Connectivity",
+        "propertyValue": "Bluetooth 5.0"
+      },
+      {
+        "propertyName": "Charge Time",
+        "propertyValue": "2 hours"
+      }
+    ]
+  }
+]

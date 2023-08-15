@@ -1,47 +1,29 @@
 [
   {
-    "itemName": "Laptop XYZ",
-    "sku": "12345-ABC",
-    "upc": "00123456789",
-    "properties": [
-      {
-        "propertyName": "Processor",
-        "propertyValue": "Intel i7"
-      },
-      {
-        "propertyName": "RAM",
-        "propertyValue": "16GB"
-      }
-    ]
+    "itemName": "Highlands Logo T-Shirt",
+    "sku": "90001-CHH",
+    "upc": "10000000001",
+    "property_name": "Color",
+    "property_value": "Navy Blue",
+    "Material": "Cotton",
+    "Size": "M"
   },
   {
-    "itemName": "Smartphone 789",
-    "sku": "67890-DEF",
-    "upc": "00987654321",
-    "properties": [
-      {
-        "propertyName": "Screen Size",
-        "propertyValue": "6.5 inches"
-      },
-      {
-        "propertyName": "Battery Life",
-        "propertyValue": "24 hours"
-      }
-    ]
+    "itemName": "Highlands Coffee Mug",
+    "sku": "90002-CHH",
+    "upc": "10000000002",
+    "property_name": "Capacity",
+    "property_value": "12 oz",
+    "Material": "Ceramic",
+    "Color": "White"
   },
   {
-    "itemName": "Wireless Headphones",
-    "sku": "11223-GHI",
-    "upc": "00876543210",
-    "properties": [
-      {
-        "propertyName": "Connectivity",
-        "propertyValue": "Bluetooth 5.0"
-      },
-      {
-        "propertyName": "Charge Time",
-        "propertyValue": "2 hours"
-      }
-    ]
+    "itemName": "Highlands Baseball Cap",
+    "sku": "90003-CHH",
+    "upc": "10000000003",
+    "property_name": "Size",
+    "property_value": "Adjustable",
+    "Material": "Cotton",
+    "Color": "Black"
   }
 ]

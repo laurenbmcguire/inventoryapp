@@ -53,12 +53,21 @@ class InventoryList extends React.Component {
       },
       {
         title: "Property Name",
-        dataIndex: "propert_name",
+        dataIndex: "property_name",
         key: "property_name",
         sorter: (a, b) => {
           return a.property_name.localeCompare(b.property_name);
         },
         sortOrder: sortedInfo.columnKey === "property_name" && sortedInfo.order,
+      },
+   {
+        title: "Property Value",
+        dataIndex: "property_value",
+        key: "property_value",
+        sorter: (a, b) => {
+          return a.property_value.localeCompare(b.property_value);
+        },
+        sortOrder: sortedInfo.columnKey === "property_value" && sortedInfo.order,
       },
       {
         key: "action",
@@ -130,3 +139,7 @@ class InventoryList extends React.Component {
 }
 
 export default InventoryList;
+
+
+
+

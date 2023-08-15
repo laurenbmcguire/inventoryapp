@@ -5,7 +5,7 @@ import { Table, Button, Input, Space } from "antd";
 import {
   DeleteOutlined,
   EditOutlined,
-  CloseCircleOutlined
+  CloseCircleOutlined,
 } from "@ant-design/icons";
 
 const { Search } = Input;
@@ -17,30 +17,57 @@ class InventoryList extends React.Component {
 
     const columns = [
       {
-        title: "Item",
+        title: "Item Name",
         dataIndex: "itemName",
         key: "itemName",
         sorter: (a, b) => {
           return a.itemName.localeCompare(b.itemName);
         },
-        sortOrder: sortedInfo.columnKey === "itemName" && sortedInfo.order
+        sortOrder: sortedInfo.columnKey === "itemName" && sortedInfo.order,
       },
       {
-        title: "Location",
-        dataIndex: "location",
-        key: "location",
+        title: "UPC",
+        dataIndex: "upc",
+        key: "upc",
         sorter: (a, b) => {
-          return a.location.localeCompare(b.location);
+          return a.upc.localeCompare(b.upc);
         },
-        sortOrder: sortedInfo.columnKey === "location" && sortedInfo.order
+        sortOrder: sortedInfo.columnKey === "upc" && sortedInfo.order,
       },
       {
-        title: "Date Added",
-        dataIndex: "addDate",
-        key: "addDate",
+        title: "Available On",
+        dataIndex: "available_on",
+        key: "available_on",
         render: (value) => moment(value).format("LLL"),
-        sorter: (a, b) => new Date(a.addDate) - new Date(b.addDate),
-        sortOrder: sortedInfo.columnKey === "addDate" && sortedInfo.order
+        sorter: (a, b) => new Date(a.available_on) - new Date(b.available_on),
+        sortOrder: sortedInfo.columnKey === "addDate" && sortedInfo.order,
+      },
+      {
+        title: "SKU",
+        dataIndex: "sku",
+        key: "sku",
+        sorter: (a, b) => {
+          return a.sku.localeCompare(b.sku);
+        },
+        sortOrder: sortedInfo.columnKey === "sku" && sortedInfo.order,
+      },
+      {
+        title: "Property Name",
+        dataIndex: "property_name",
+        key: "property_name",
+        sorter: (a, b) => {
+          return a.property_name.localeCompare(b.property_name);
+        },
+        sortOrder: sortedInfo.columnKey === "property_name" && sortedInfo.order,
+      },
+   {
+        title: "Property Value",
+        dataIndex: "property_value",
+        key: "property_value",
+        sorter: (a, b) => {
+          return a.property_value.localeCompare(b.property_value);
+        },
+        sortOrder: sortedInfo.columnKey === "property_value" && sortedInfo.order,
       },
       {
         key: "action",
@@ -60,8 +87,8 @@ class InventoryList extends React.Component {
               onClick={() => this.props.deleteRecord(record)}
             />
           </>
-        )
-      }
+        ),
+      },
     ];
 
     return (
@@ -96,7 +123,7 @@ class InventoryList extends React.Component {
           onChange={this.props.handleTableChange}
           pagination={{ defaultPageSize: 10, showSizeChanger: true }}
           expandable={{
-            expandedRowRender: (record) => <p>{record.notes}</p>
+            expandedRowRender: (record) => <p>{record.notes}</p>,
           }}
         />
 
@@ -112,3 +139,7 @@ class InventoryList extends React.Component {
 }
 
 export default InventoryList;
+
+
+
+

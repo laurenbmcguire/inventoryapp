@@ -1,6 +1,5 @@
 import React from "react";
-import { Form, Input, Button, Space } from "antd";
-import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
+import { Form, Input, Button } from "antd";
 
 class InventoryForm extends React.Component {
   state = {
@@ -14,7 +13,8 @@ class InventoryForm extends React.Component {
         name: this.state.record.name,
         sku: this.state.record.sku,
         upc: this.state.record.upc,
-        properties: this.state.record.properties
+        propertyName: this.state.record.propertyName,
+        propertyValue: this.state.record.propertyValue
       });
     }
   }
@@ -30,19 +30,6 @@ class InventoryForm extends React.Component {
         }}
         layout="vertical"
       >
-        <Form.Item
-          name="name"
-          label="Name:"
-          rules={[
-            {
-              required: true,
-              message: "This information is required."
-            }
-          ]}
-        >
-          <Input />
-        </Form.Item>
-
         <Form.Item
           name="sku"
           label="SKU:"
@@ -73,57 +60,31 @@ class InventoryForm extends React.Component {
           <Input />
         </Form.Item>
 
-        <Form.List name="properties">
-          {(fields, { add, remove }) => (
-            <>
-              {fields.map((field, index) => (
-                <Space
-                  key={field.key}
-                  style={{ display: "flex", marginBottom: 8 }}
-                  align="baseline"
-                >
-                  <Form.Item
-                    {...field}
-                    name={[field.name, "propertyName"]}
-                    fieldKey={[field.fieldKey, "propertyName"]}
-                    rules={[
-                      {
-                        required: true,
-                        message: "Property name is required."
-                      }
-                    ]}
-                  >
-                    <Input placeholder="Property Name" />
-                  </Form.Item>
-                  <Form.Item
-                    {...field}
-                    name={[field.name, "propertyValue"]}
-                    fieldKey={[field.fieldKey, "propertyValue"]}
-                    rules={[
-                      {
-                        required: true,
-                        message: "Property value is required."
-                      }
-                    ]}
-                  >
-                    <Input placeholder="Property Value" />
-                  </Form.Item>
-                  <MinusCircleOutlined onClick={() => remove(field.name)} />
-                </Space>
-              ))}
-              <Form.Item>
-                <Button
-                  type="dashed"
-                  onClick={() => add()}
-                  block
-                  icon={<PlusOutlined />}
-                >
-                  Add Property
-                </Button>
-              </Form.Item>
-            </>
-          )}
-        </Form.List>
+        <Form.Item
+          name="property_name"
+          label="Property Name:"
+          rules={[
+            {
+              required: true,
+              message: "Property name is required."
+            }
+          ]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          name="property_value"
+          label="Property Value:"
+          rules={[
+            {
+              required: true,
+              message: "Property value is required."
+            }
+          ]}
+        >
+          <Input />
+        </Form.Item>
       </Form>
     );
   }

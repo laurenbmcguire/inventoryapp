@@ -1,0 +1,29 @@
+[
+  {
+    "itemName": "Highlands Logo T-Shirt",
+    "sku": "90001-CHH",
+    "upc": "10000000001",
+    "property_name": "Color",
+    "property_value": "Navy Blue",
+    "Material": "Cotton",
+    "Size": "M"
+  },
+  {
+    "itemName": "Highlands Coffee Mug",
+    "sku": "90002-CHH",
+    "upc": "10000000002",
+    "property_name": "Capacity",
+    "property_value": "12 oz",
+    "Material": "Ceramic",
+    "Color": "White"
+  },
+  {
+    "itemName": "Highlands Baseball Cap",
+    "sku": "90003-CHH",
+    "upc": "10000000003",
+    "property_name": "Size",
+    "property_value": "Adjustable",
+    "Material": "Cotton",
+    "Color": "Black"
+  }
+]
